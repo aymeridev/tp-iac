@@ -1,7 +1,7 @@
 variable "container_name" {
   description = "conteneur web"
-  type = string
-  default = "tp-iac-nginx"
+  type        = string
+  default     = "tp-iac-nginx"
 
   validation {
     condition = can(regex("^[a-zA-Z0-9][a-zA-Z0-9_.-]*$",
@@ -12,11 +12,11 @@ variable "container_name" {
 
 variable "external_port" {
   description = "port http exposé sur la machine locale"
-  type = number
-  default = 8080
+  type        = number
+  default     = 8080
 
   validation {
-    condition = var.external_port >= 1024 && var.external_port <= 65535
+    condition     = var.external_port >= 1024 && var.external_port <= 65535
     error_message = "le port doit être compris entre 1024 et 65535"
   }
 }
