@@ -3,8 +3,8 @@ terraform {
 
   required_providers {
     docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0"
+        source = "kreuzwerker/docker"
+        version = "~> 3.0"
     }
   }
 
@@ -12,8 +12,8 @@ terraform {
 provider "docker" {}
 
 resource "docker_image" "nginx" {
-  name         = "nginx:alpine"
-  keep_locally = true
+    name = "nginx:alpine"
+    keep_locally = true
 }
 
 resource "docker_network" "app_network" {
@@ -21,13 +21,13 @@ resource "docker_network" "app_network" {
 }
 
 resource "docker_container" "web" {
-  name  = var.container_name
+  name = var.container_name
   image = docker_image.nginx.image_id
 
   ports {
     internal = 80
     external = var.external_port
-    ip       = "127.0.0.1"
+    ip = "127.0.0.1"
   }
 
   networks_advanced {
@@ -37,6 +37,6 @@ resource "docker_container" "web" {
   mounts {
     target = "/usr/share/nginx/html"
     source = abspath("${path.module}/html")
-    type   = "bind"
+    type = "bind"
   }
 }
