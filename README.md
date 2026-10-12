@@ -24,3 +24,5 @@ exo 1 : dans dev.tfvars, on change `container_name`
 exo 2 : pareil dans dev.tfvars, on change `external_port`
 
 exo 4 : terraform state list affiche 3 ressources (image, réseau, conteneur). Le conteneur dépend de l'image (image_id) et du réseau (networks_advanced). Ce sont des dépendances implicites
+
+exo 5 : après un docker stop, terraform plan détecte une dérive. Le refresh constate que le conteneur ne tourne plus, alors que must_run = true, et propose de le recréer. avec terraform apply cela restaure l'état
