@@ -8,6 +8,7 @@ output "network_name" {
   value       = docker_network.app_network.name
 }
 
+
 output "website_url" {
   description = "URL du serveur web local"
   value       = "http://localhost:${var.external_port}"

@@ -10,6 +10,12 @@ variable "container_name" {
   }
 }
 
+variable "network_name" {
+  description = "nom du réseau docker"
+  type        = string
+  default     = "network"
+}
+
 variable "external_port" {
   description = "port http exposé sur la machine locale"
   type        = number

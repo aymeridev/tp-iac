@@ -16,3 +16,9 @@
 - pour ne pas divulguer sur un dépot public les informations de connexion à la bdd, clés privés, etc...
 
 15) cela permet de facilement basculer d'une version à la précedente, de consulter le travail de ses collègues, etc...
+
+---
+
+exo 1 : dans dev.tfvars, on change `container_name`
+
+exo 2 : pareil dans dev.tfvars, on change `external_port`
