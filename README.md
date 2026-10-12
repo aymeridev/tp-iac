@@ -9,3 +9,10 @@
 
 11) cela permet de limiter le terraform a une seule ip, par exemple sur un serveur cela empêche a des utilisateurs tiers d'y accéder et de faire des requêtes
 
+13)
+- le site web, nginx et le réseau docker.
+- les informations du conteneur (ses paramètres, son réseau, ses points de montage, etc..)
+- car cela peut contenir des informations sensibles
+- pour ne pas divulguer sur un dépot public les informations de connexion à la bdd, clés privés, etc...
+
+15) cela permet de facilement basculer d'une version à la précedente, de consulter le travail de ses collègues, etc...
